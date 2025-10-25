@@ -1,0 +1,1302 @@
+[
+  {
+    "id": 1,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-01T00:00:00",
+    "numOfLikes": 1200,
+    "numOfWatches": 8000,
+    "brandId": 1,
+    "productId": 1,
+    "brand": {
+      "id": 1,
+      "displayName": "NovaWear",
+      "description": "NovaWear creates sustainable fashion for modern lifestyles.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 1,
+      "name": "EcoFlex T-Shirt",
+      "description": "Breathable organic cotton tee for everyday comfort.",
+      "category": "Clothing",
+      "price": 180,
+      "mediaUrl": "Products/Brand1/EcoFlexT-Shirt.png",
+      "discountPercentage": 10,
+      "brandId": 1
+    }
+  },
+  {
+    "id": 2,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-08T00:00:00",
+    "numOfLikes": 2300,
+    "numOfWatches": 15000,
+    "brandId": 1,
+    "productId": 2,
+    "brand": {
+      "id": 1,
+      "displayName": "NovaWear",
+      "description": "NovaWear creates sustainable fashion for modern lifestyles.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 2,
+      "name": "ReVibe Denim Jacket",
+      "description": "Stylish recycled denim jacket for a sustainable look.",
+      "category": "Clothing",
+      "price": 420,
+      "mediaUrl": "Products/Brand1/ReVibe Denim Jacket.jfif",
+      "discountPercentage": 20,
+      "brandId": 1
+    }
+  },
+  {
+    "id": 3,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-15T00:00:00",
+    "numOfLikes": 1800,
+    "numOfWatches": 11000,
+    "brandId": 1,
+    "productId": 3,
+    "brand": {
+      "id": 1,
+      "displayName": "NovaWear",
+      "description": "NovaWear creates sustainable fashion for modern lifestyles.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 3,
+      "name": "EcoStride Sneakers",
+      "description": "Lightweight sneakers made from recycled fibers.",
+      "category": "Footwear",
+      "price": 360,
+      "mediaUrl": "Products/Brand1/EcoStride Sneakers.jfif",
+      "discountPercentage": 30,
+      "brandId": 1
+    }
+  },
+  {
+    "id": 4,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-22T00:00:00",
+    "numOfLikes": 2600,
+    "numOfWatches": 20000,
+    "brandId": 1,
+    "productId": 4,
+    "brand": {
+      "id": 1,
+      "displayName": "NovaWear",
+      "description": "NovaWear creates sustainable fashion for modern lifestyles.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 4,
+      "name": "Bamboo Breeze Hoodie",
+      "description": "Soft hoodie crafted from sustainable bamboo fabric.",
+      "category": "Clothing",
+      "price": 280,
+      "mediaUrl": "Products/Brand1/Bamboo Breeze Hoodie.png",
+      "discountPercentage": 40,
+      "brandId": 1
+    }
+  },
+  {
+    "id": 5,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-29T00:00:00",
+    "numOfLikes": 3400,
+    "numOfWatches": 25000,
+    "brandId": 1,
+    "productId": 5,
+    "brand": {
+      "id": 1,
+      "displayName": "NovaWear",
+      "description": "NovaWear creates sustainable fashion for modern lifestyles.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 5,
+      "name": "ReLeaf Tote Bag",
+      "description": "Eco-friendly tote bag with minimalist design.",
+      "category": "Accessories",
+      "price": 150,
+      "mediaUrl": "Products/Brand1/ReLeaf Tote Bag.jfif",
+      "discountPercentage": null,
+      "brandId": 1
+    }
+  },
+  {
+    "id": 6,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-01T00:00:00",
+    "numOfLikes": 800,
+    "numOfWatches": 5000,
+    "brandId": 2,
+    "productId": 7,
+    "brand": {
+      "id": 2,
+      "displayName": "TechEase",
+      "description": "TechEase designs smart accessories for a seamless daily life.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Apple_logo_black.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 7,
+      "name": "SyncCharge Cable",
+      "description": "Fast-charging braided USB-C cable with smart chip.",
+      "category": "Electronics",
+      "price": 180,
+      "mediaUrl": "Products/Brand2/SyncCharge Cable.jfif",
+      "discountPercentage": 10,
+      "brandId": 2
+    }
+  },
+  {
+    "id": 7,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-08T00:00:00",
+    "numOfLikes": 6000,
+    "numOfWatches": 95000,
+    "brandId": 2,
+    "productId": 8,
+    "brand": {
+      "id": 2,
+      "displayName": "TechEase",
+      "description": "TechEase designs smart accessories for a seamless daily life.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Apple_logo_black.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 8,
+      "name": "SmartDock Pro",
+      "description": "Multi-device charging dock with wireless pad.",
+      "category": "Electronics",
+      "price": 420,
+      "mediaUrl": "Products/Brand2/SmartDock Pro.jfif",
+      "discountPercentage": 20,
+      "brandId": 2
+    }
+  },
+  {
+    "id": 8,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-15T00:00:00",
+    "numOfLikes": 9000,
+    "numOfWatches": 30000,
+    "brandId": 2,
+    "productId": 9,
+    "brand": {
+      "id": 2,
+      "displayName": "TechEase",
+      "description": "TechEase designs smart accessories for a seamless daily life.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Apple_logo_black.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 9,
+      "name": "AirPulse Earbuds",
+      "description": "Noise-cancelling Bluetooth earbuds with 24h battery.",
+      "category": "Audio",
+      "price": 540,
+      "mediaUrl": "Products/Brand2/AirPulse Earbuds.jfif",
+      "discountPercentage": 30,
+      "brandId": 2
+    }
+  },
+  {
+    "id": 9,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-22T00:00:00",
+    "numOfLikes": 15000,
+    "numOfWatches": 35000,
+    "brandId": 2,
+    "productId": 10,
+    "brand": {
+      "id": 2,
+      "displayName": "TechEase",
+      "description": "TechEase designs smart accessories for a seamless daily life.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Apple_logo_black.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 10,
+      "name": "MagGrip Phone Mount",
+      "description": "Smart magnetic car mount with auto-lock system.",
+      "category": "Accessories",
+      "price": 190,
+      "mediaUrl": "Products/Brand2/MagGrip Phone Mount.jfif",
+      "discountPercentage": 40,
+      "brandId": 2
+    }
+  },
+  {
+    "id": 10,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-29T00:00:00",
+    "numOfLikes": 100000,
+    "numOfWatches": 300000,
+    "brandId": 2,
+    "productId": 11,
+    "brand": {
+      "id": 2,
+      "displayName": "TechEase",
+      "description": "TechEase designs smart accessories for a seamless daily life.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Apple_logo_black.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 11,
+      "name": "PulseTrack Watch",
+      "description": "Fitness smartwatch with heart-rate and sleep tracking.",
+      "category": "Wearables",
+      "price": 690,
+      "mediaUrl": "Products/Brand2/PulseTrack Watch.jfif",
+      "discountPercentage": null,
+      "brandId": 2
+    }
+  },
+  {
+    "id": 11,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-01T00:00:00",
+    "numOfLikes": 2000,
+    "numOfWatches": 10000,
+    "brandId": 3,
+    "productId": 13,
+    "brand": {
+      "id": 3,
+      "displayName": "Glowify",
+      "description": "Glowify offers natural skincare powered by modern innovation.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Google_logo.svg",
+      "verificationStatus": "Pending"
+    },
+    "product": {
+      "id": 13,
+      "name": "HydraBloom Serum",
+      "description": "Vitamin C serum that brightens and smooths skin.",
+      "category": "Skincare",
+      "price": 250,
+      "mediaUrl": "Products/Brand3/HydraBloom Serum.jpg",
+      "discountPercentage": 10,
+      "brandId": 3
+    }
+  },
+  {
+    "id": 12,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-08T00:00:00",
+    "numOfLikes": 5000,
+    "numOfWatches": 20000,
+    "brandId": 3,
+    "productId": 14,
+    "brand": {
+      "id": 3,
+      "displayName": "Glowify",
+      "description": "Glowify offers natural skincare powered by modern innovation.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Google_logo.svg",
+      "verificationStatus": "Pending"
+    },
+    "product": {
+      "id": 14,
+      "name": "PureDew Cleanser",
+      "description": "Gentle cleanser with aloe and green tea.",
+      "category": "Skincare",
+      "price": 180,
+      "mediaUrl": "Products/Brand3/PureDew Cleanser.png",
+      "discountPercentage": 20,
+      "brandId": 3
+    }
+  },
+  {
+    "id": 13,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-15T00:00:00",
+    "numOfLikes": 8000,
+    "numOfWatches": 25000,
+    "brandId": 3,
+    "productId": 15,
+    "brand": {
+      "id": 3,
+      "displayName": "Glowify",
+      "description": "Glowify offers natural skincare powered by modern innovation.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Google_logo.svg",
+      "verificationStatus": "Pending"
+    },
+    "product": {
+      "id": 15,
+      "name": "LumiMist Toner",
+      "description": "Hydrating toner that refines pores naturally.",
+      "category": "Skincare",
+      "price": 210,
+      "mediaUrl": "Products/Brand3/LumiMist Toner.webp",
+      "discountPercentage": 30,
+      "brandId": 3
+    }
+  },
+  {
+    "id": 14,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-22T00:00:00",
+    "numOfLikes": 10000,
+    "numOfWatches": 40000,
+    "brandId": 3,
+    "productId": 16,
+    "brand": {
+      "id": 3,
+      "displayName": "Glowify",
+      "description": "Glowify offers natural skincare powered by modern innovation.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Google_logo.svg",
+      "verificationStatus": "Pending"
+    },
+    "product": {
+      "id": 16,
+      "name": "Radiant Night Cream",
+      "description": "Rich moisturizer for overnight skin repair.",
+      "category": "Skincare",
+      "price": 330,
+      "mediaUrl": "Products/Brand3/Radiant Night Cream.webp",
+      "discountPercentage": 40,
+      "brandId": 3
+    }
+  },
+  {
+    "id": 15,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-29T00:00:00",
+    "numOfLikes": 15000,
+    "numOfWatches": 50000,
+    "brandId": 3,
+    "productId": 17,
+    "brand": {
+      "id": 3,
+      "displayName": "Glowify",
+      "description": "Glowify offers natural skincare powered by modern innovation.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Google_logo.svg",
+      "verificationStatus": "Pending"
+    },
+    "product": {
+      "id": 17,
+      "name": "GlowShield Sunscreen",
+      "description": "SPF 50 mineral sunscreen with lightweight feel.",
+      "category": "Skincare",
+      "price": 290,
+      "mediaUrl": "Products/Brand3/GlowShield Sunscreen.jpg",
+      "discountPercentage": null,
+      "brandId": 3
+    }
+  },
+  {
+    "id": 16,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-01T00:00:00",
+    "numOfLikes": 1700,
+    "numOfWatches": 12000,
+    "brandId": 4,
+    "productId": 19,
+    "brand": {
+      "id": 4,
+      "displayName": "UrbanFuel",
+      "description": "UrbanFuel brings premium streetwear for active youth.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 19,
+      "name": "StreetCore Hoodie",
+      "description": "Oversized hoodie with minimalist street-style logo.",
+      "category": "Clothing",
+      "price": 320,
+      "mediaUrl": "Products/Brand4/StreetCore Hoodie.png",
+      "discountPercentage": 10,
+      "brandId": 4
+    }
+  },
+  {
+    "id": 17,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-08T00:00:00",
+    "numOfLikes": 2500,
+    "numOfWatches": 18000,
+    "brandId": 4,
+    "productId": 20,
+    "brand": {
+      "id": 4,
+      "displayName": "UrbanFuel",
+      "description": "UrbanFuel brings premium streetwear for active youth.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 20,
+      "name": "UrbanFlex Joggers",
+      "description": "Slim-fit joggers for comfort and performance.",
+      "category": "Clothing",
+      "price": 270,
+      "mediaUrl": "Products/Brand4/UrbanFlex Joggers.png",
+      "discountPercentage": 20,
+      "brandId": 4
+    }
+  },
+  {
+    "id": 18,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-15T00:00:00",
+    "numOfLikes": 4000,
+    "numOfWatches": 23000,
+    "brandId": 4,
+    "productId": 21,
+    "brand": {
+      "id": 4,
+      "displayName": "UrbanFuel",
+      "description": "UrbanFuel brings premium streetwear for active youth.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 21,
+      "name": "FuelRunner Sneakers",
+      "description": "Modern street sneakers with breathable mesh upper.",
+      "category": "Footwear",
+      "price": 540,
+      "mediaUrl": "Products/Brand4/FuelRunner Sneakers.png",
+      "discountPercentage": 30,
+      "brandId": 4
+    }
+  },
+  {
+    "id": 19,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-22T00:00:00",
+    "numOfLikes": 5200,
+    "numOfWatches": 30000,
+    "brandId": 4,
+    "productId": 22,
+    "brand": {
+      "id": 4,
+      "displayName": "UrbanFuel",
+      "description": "UrbanFuel brings premium streetwear for active youth.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 22,
+      "name": "CityWave Jacket",
+      "description": "Lightweight windbreaker with waterproof coating.",
+      "category": "Outerwear",
+      "price": 620,
+      "mediaUrl": "Products/Brand4/CityWave Jacket.png",
+      "discountPercentage": 40,
+      "brandId": 4
+    }
+  },
+  {
+    "id": 20,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-29T00:00:00",
+    "numOfLikes": 7500,
+    "numOfWatches": 35000,
+    "brandId": 4,
+    "productId": 23,
+    "brand": {
+      "id": 4,
+      "displayName": "UrbanFuel",
+      "description": "UrbanFuel brings premium streetwear for active youth.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 23,
+      "name": "SnapEdge Cap",
+      "description": "Classic snapback cap with embroidered logo.",
+      "category": "Accessories",
+      "price": 180,
+      "mediaUrl": "Products/Brand4/SnapEdge Cap.webp",
+      "discountPercentage": null,
+      "brandId": 4
+    }
+  },
+  {
+    "id": 21,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-01T00:00:00",
+    "numOfLikes": 1300,
+    "numOfWatches": 10000,
+    "brandId": 5,
+    "productId": 25,
+    "brand": {
+      "id": 5,
+      "displayName": "Zenora",
+      "description": "Zenora promotes wellness with premium lifestyle products.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/YouTube_logo.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 25,
+      "name": "ZenMat Pro",
+      "description": "Premium non-slip yoga mat made with eco rubber.",
+      "category": "Fitness",
+      "price": 350,
+      "mediaUrl": "Products/Brand5/ZenMat.webp",
+      "discountPercentage": 10,
+      "brandId": 5
+    }
+  },
+  {
+    "id": 22,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-08T00:00:00",
+    "numOfLikes": 2000,
+    "numOfWatches": 14000,
+    "brandId": 5,
+    "productId": 26,
+    "brand": {
+      "id": 5,
+      "displayName": "Zenora",
+      "description": "Zenora promotes wellness with premium lifestyle products.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/YouTube_logo.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 26,
+      "name": "AromaBliss Diffuser",
+      "description": "Ultrasonic diffuser with ambient lighting.",
+      "category": "Wellness",
+      "price": 290,
+      "mediaUrl": "Products/Brand5/AromaBliss Diffuser.webp",
+      "discountPercentage": 20,
+      "brandId": 5
+    }
+  },
+  {
+    "id": 23,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-15T00:00:00",
+    "numOfLikes": 3600,
+    "numOfWatches": 20000,
+    "brandId": 5,
+    "productId": 27,
+    "brand": {
+      "id": 5,
+      "displayName": "Zenora",
+      "description": "Zenora promotes wellness with premium lifestyle products.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/YouTube_logo.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 27,
+      "name": "CalmWave Candle",
+      "description": "Soy candle infused with lavender and chamomile.",
+      "category": "Home",
+      "price": 170,
+      "mediaUrl": "Products/Brand5/CalmWave Candle.webp",
+      "discountPercentage": 30,
+      "brandId": 5
+    }
+  },
+  {
+    "id": 24,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-22T00:00:00",
+    "numOfLikes": 4500,
+    "numOfWatches": 26000,
+    "brandId": 5,
+    "productId": 28,
+    "brand": {
+      "id": 5,
+      "displayName": "Zenora",
+      "description": "Zenora promotes wellness with premium lifestyle products.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/YouTube_logo.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 28,
+      "name": "Balance Bottle",
+      "description": "Glass water bottle with bamboo lid and sleeve.",
+      "category": "Wellness",
+      "price": 210,
+      "mediaUrl": "Products/Brand5/Balance Bottle.webp",
+      "discountPercentage": 40,
+      "brandId": 5
+    }
+  },
+  {
+    "id": 25,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-29T00:00:00",
+    "numOfLikes": 6000,
+    "numOfWatches": 30000,
+    "brandId": 5,
+    "productId": 29,
+    "brand": {
+      "id": 5,
+      "displayName": "Zenora",
+      "description": "Zenora promotes wellness with premium lifestyle products.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/YouTube_logo.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 29,
+      "name": "Focus Journal",
+      "description": "Guided journal for mindfulness and productivity.",
+      "category": "Stationery",
+      "price": 150,
+      "mediaUrl": "Products/Brand5/Focus Journal.webp",
+      "discountPercentage": null,
+      "brandId": 5
+    }
+  },
+  {
+    "id": 26,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-01T00:00:00",
+    "numOfLikes": 1800,
+    "numOfWatches": 9000,
+    "brandId": 6,
+    "productId": 31,
+    "brand": {
+      "id": 6,
+      "displayName": "AeroFit",
+      "description": "AeroFit crafts smart fitness gear for peak performance.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Reddit_Logo_Full_2021.svg",
+      "verificationStatus": "Pending"
+    },
+    "product": {
+      "id": 31,
+      "name": "AeroTrack Smart Band",
+      "description": "Fitness tracker with pulse and oxygen monitoring.",
+      "category": "Wearables",
+      "price": 540,
+      "mediaUrl": "Products/Brand6/AeroTrack Smart Band.png",
+      "discountPercentage": 10,
+      "brandId": 6
+    }
+  },
+  {
+    "id": 27,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-08T00:00:00",
+    "numOfLikes": 2200,
+    "numOfWatches": 15000,
+    "brandId": 6,
+    "productId": 32,
+    "brand": {
+      "id": 6,
+      "displayName": "AeroFit",
+      "description": "AeroFit crafts smart fitness gear for peak performance.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Reddit_Logo_Full_2021.svg",
+      "verificationStatus": "Pending"
+    },
+    "product": {
+      "id": 32,
+      "name": "FlexCore Dumbbells",
+      "description": "Adjustable dumbbells for home strength training.",
+      "category": "Equipment",
+      "price": 720,
+      "mediaUrl": "Products/Brand6/bowflex-dumbbells.jpg",
+      "discountPercentage": 20,
+      "brandId": 6
+    }
+  },
+  {
+    "id": 28,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-15T00:00:00",
+    "numOfLikes": 3500,
+    "numOfWatches": 22000,
+    "brandId": 6,
+    "productId": 33,
+    "brand": {
+      "id": 6,
+      "displayName": "AeroFit",
+      "description": "AeroFit crafts smart fitness gear for peak performance.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Reddit_Logo_Full_2021.svg",
+      "verificationStatus": "Pending"
+    },
+    "product": {
+      "id": 33,
+      "name": "PulsePro Chest Strap",
+      "description": "Heart-rate strap compatible with popular apps.",
+      "category": "Accessories",
+      "price": 210,
+      "mediaUrl": "Products/Brand6/PulsePro Chest Strap.webp",
+      "discountPercentage": 30,
+      "brandId": 6
+    }
+  },
+  {
+    "id": 29,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-22T00:00:00",
+    "numOfLikes": 4800,
+    "numOfWatches": 28000,
+    "brandId": 6,
+    "productId": 34,
+    "brand": {
+      "id": 6,
+      "displayName": "AeroFit",
+      "description": "AeroFit crafts smart fitness gear for peak performance.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Reddit_Logo_Full_2021.svg",
+      "verificationStatus": "Pending"
+    },
+    "product": {
+      "id": 34,
+      "name": "AeroMat Trainer",
+      "description": "High-density mat ideal for HIIT and yoga.",
+      "category": "Fitness",
+      "price": 250,
+      "mediaUrl": "Products/Brand6/AeroMat Trainer.webp",
+      "discountPercentage": 40,
+      "brandId": 6
+    }
+  },
+  {
+    "id": 30,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-29T00:00:00",
+    "numOfLikes": 5200,
+    "numOfWatches": 31000,
+    "brandId": 6,
+    "productId": 35,
+    "brand": {
+      "id": 6,
+      "displayName": "AeroFit",
+      "description": "AeroFit crafts smart fitness gear for peak performance.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Reddit_Logo_Full_2021.svg",
+      "verificationStatus": "Pending"
+    },
+    "product": {
+      "id": 35,
+      "name": "HydraFuel Bottle",
+      "description": "Smart bottle that tracks hydration levels.",
+      "category": "Accessories",
+      "price": 170,
+      "mediaUrl": "Products/Brand6/HydraFuel Bottle.jfif",
+      "discountPercentage": null,
+      "brandId": 6
+    }
+  },
+  {
+    "id": 31,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-01T00:00:00",
+    "numOfLikes": 1500,
+    "numOfWatches": 7000,
+    "brandId": 7,
+    "productId": 37,
+    "brand": {
+      "id": 7,
+      "displayName": "EcoNest",
+      "description": "EcoNest builds eco-friendly home solutions for modern living.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Instagram_logo_2016.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 37,
+      "name": "EcoGlow Lamp",
+      "description": "Bamboo desk lamp with rechargeable LED bulb.",
+      "category": "Home Decor",
+      "price": 250,
+      "mediaUrl": "Products/Brand7/EcoGlow Lamp.webp",
+      "discountPercentage": 10,
+      "brandId": 7
+    }
+  },
+  {
+    "id": 32,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-08T00:00:00",
+    "numOfLikes": 2100,
+    "numOfWatches": 13000,
+    "brandId": 7,
+    "productId": 38,
+    "brand": {
+      "id": 7,
+      "displayName": "EcoNest",
+      "description": "EcoNest builds eco-friendly home solutions for modern living.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Instagram_logo_2016.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 38,
+      "name": "GreenWave Blanket",
+      "description": "Soft throw blanket made from recycled cotton.",
+      "category": "Home",
+      "price": 320,
+      "mediaUrl": "Products/Brand7/GreenWave Blanket.jfif",
+      "discountPercentage": 20,
+      "brandId": 7
+    }
+  },
+  {
+    "id": 33,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-15T00:00:00",
+    "numOfLikes": 2700,
+    "numOfWatches": 20000,
+    "brandId": 7,
+    "productId": 39,
+    "brand": {
+      "id": 7,
+      "displayName": "EcoNest",
+      "description": "EcoNest builds eco-friendly home solutions for modern living.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Instagram_logo_2016.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 39,
+      "name": "PlantPure Planter Set",
+      "description": "Biodegradable planters perfect for indoor herbs.",
+      "category": "Gardening",
+      "price": 180,
+      "mediaUrl": "Products/Brand7/PlantPure Planter Set.jpg",
+      "discountPercentage": 30,
+      "brandId": 7
+    }
+  },
+  {
+    "id": 34,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-22T00:00:00",
+    "numOfLikes": 4000,
+    "numOfWatches": 26000,
+    "brandId": 7,
+    "productId": 40,
+    "brand": {
+      "id": 7,
+      "displayName": "EcoNest",
+      "description": "EcoNest builds eco-friendly home solutions for modern living.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Instagram_logo_2016.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 40,
+      "name": "EcoFresh Diffuser",
+      "description": "Natural reed diffuser with citrus essential oils.",
+      "category": "Home Fragrance",
+      "price": 210,
+      "mediaUrl": "Products/Brand7/EcoFresh Diffuser.webp",
+      "discountPercentage": 40,
+      "brandId": 7
+    }
+  },
+  {
+    "id": 35,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-29T00:00:00",
+    "numOfLikes": 5200,
+    "numOfWatches": 32000,
+    "brandId": 7,
+    "productId": 41,
+    "brand": {
+      "id": 7,
+      "displayName": "EcoNest",
+      "description": "EcoNest builds eco-friendly home solutions for modern living.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Instagram_logo_2016.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 41,
+      "name": "PureBreeze Air Filter",
+      "description": "Reusable air filter system for cleaner home air.",
+      "category": "Appliances",
+      "price": 640,
+      "mediaUrl": "Products/Brand7/PureBreeze Air Filter.webp",
+      "discountPercentage": null,
+      "brandId": 7
+    }
+  },
+  {
+    "id": 36,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-01T00:00:00",
+    "numOfLikes": 1800,
+    "numOfWatches": 11000,
+    "brandId": 8,
+    "productId": 43,
+    "brand": {
+      "id": 8,
+      "displayName": "ByteWave",
+      "description": "ByteWave delivers tech-driven accessories for everyday needs.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Spotify_logo_with_text.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 43,
+      "name": "VoltSync Charger",
+      "description": "High-speed GaN charger with dual USB-C output.",
+      "category": "Electronics",
+      "price": 280,
+      "mediaUrl": "Products/Brand8/VoltSync Charger.webp",
+      "discountPercentage": 10,
+      "brandId": 8
+    }
+  },
+  {
+    "id": 37,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-08T00:00:00",
+    "numOfLikes": 2500,
+    "numOfWatches": 16000,
+    "brandId": 8,
+    "productId": 44,
+    "brand": {
+      "id": 8,
+      "displayName": "ByteWave",
+      "description": "ByteWave delivers tech-driven accessories for everyday needs.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Spotify_logo_with_text.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 44,
+      "name": "StreamPad Mouse",
+      "description": "Ergonomic wireless mouse with silent clicks.",
+      "category": "Accessories",
+      "price": 240,
+      "mediaUrl": "Products/Brand8/StreamPad Mouse.jpg",
+      "discountPercentage": 20,
+      "brandId": 8
+    }
+  },
+  {
+    "id": 38,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-15T00:00:00",
+    "numOfLikes": 3900,
+    "numOfWatches": 22000,
+    "brandId": 8,
+    "productId": 45,
+    "brand": {
+      "id": 8,
+      "displayName": "ByteWave",
+      "description": "ByteWave delivers tech-driven accessories for everyday needs.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Spotify_logo_with_text.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 45,
+      "name": "DataShell SSD Case",
+      "description": "Shockproof case for portable SSDs.",
+      "category": "Storage",
+      "price": 190,
+      "mediaUrl": "Products/Brand8/DataShell SSD Case.jpg",
+      "discountPercentage": 30,
+      "brandId": 8
+    }
+  },
+  {
+    "id": 39,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-22T00:00:00",
+    "numOfLikes": 4800,
+    "numOfWatches": 27000,
+    "brandId": 8,
+    "productId": 46,
+    "brand": {
+      "id": 8,
+      "displayName": "ByteWave",
+      "description": "ByteWave delivers tech-driven accessories for everyday needs.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Spotify_logo_with_text.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 46,
+      "name": "WavePods Mini",
+      "description": "Compact true wireless earbuds with clear audio.",
+      "category": "Audio",
+      "price": 420,
+      "mediaUrl": "Products/Brand8/WavePods Mini.jpg",
+      "discountPercentage": 40,
+      "brandId": 8
+    }
+  },
+  {
+    "id": 40,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-29T00:00:00",
+    "numOfLikes": 6500,
+    "numOfWatches": 33000,
+    "brandId": 8,
+    "productId": 47,
+    "brand": {
+      "id": 8,
+      "displayName": "ByteWave",
+      "description": "ByteWave delivers tech-driven accessories for everyday needs.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Spotify_logo_with_text.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 47,
+      "name": "NeonLink Cable Set",
+      "description": "Color-coded USB-C and Lightning cable pack.",
+      "category": "Accessories",
+      "price": 160,
+      "mediaUrl": "Products/Brand8/NeonLink Cable Set.webp",
+      "discountPercentage": null,
+      "brandId": 8
+    }
+  },
+  {
+    "id": 41,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-01T00:00:00",
+    "numOfLikes": 1200,
+    "numOfWatches": 8000,
+    "brandId": 9,
+    "productId": 49,
+    "brand": {
+      "id": 9,
+      "displayName": "PureGlow",
+      "description": "PureGlow focuses on clean and ethical skincare essentials.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Twitter_bird_logo_2012.svg",
+      "verificationStatus": "Pending"
+    },
+    "product": {
+      "id": 49,
+      "name": "AquaRenew Cleanser",
+      "description": "Refreshing foaming cleanser for daily use.",
+      "category": "Skincare",
+      "price": 180,
+      "mediaUrl": "Products/Brand9/AquaRenew Cleanser.png",
+      "discountPercentage": 10,
+      "brandId": 9
+    }
+  },
+  {
+    "id": 42,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-08T00:00:00",
+    "numOfLikes": 2000,
+    "numOfWatches": 12000,
+    "brandId": 9,
+    "productId": 50,
+    "brand": {
+      "id": 9,
+      "displayName": "PureGlow",
+      "description": "PureGlow focuses on clean and ethical skincare essentials.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Twitter_bird_logo_2012.svg",
+      "verificationStatus": "Pending"
+    },
+    "product": {
+      "id": 50,
+      "name": "BrightVeil Moisturizer",
+      "description": "Lightweight daily cream with niacinamide for radiant skin.",
+      "category": "Skincare",
+      "price": 220,
+      "mediaUrl": "Products/Brand9/BrightVeil Moisturizer.png",
+      "discountPercentage": 20,
+      "brandId": 9
+    }
+  },
+  {
+    "id": 43,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-15T00:00:00",
+    "numOfLikes": 2700,
+    "numOfWatches": 18000,
+    "brandId": 9,
+    "productId": 51,
+    "brand": {
+      "id": 9,
+      "displayName": "PureGlow",
+      "description": "PureGlow focuses on clean and ethical skincare essentials.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Twitter_bird_logo_2012.svg",
+      "verificationStatus": "Pending"
+    },
+    "product": {
+      "id": 51,
+      "name": "PureCure Mask",
+      "description": "Detoxifying clay mask that purifies pores naturally.",
+      "category": "Skincare",
+      "price": 240,
+      "mediaUrl": "Products/Brand9/PureCure Mask.jpg",
+      "discountPercentage": 30,
+      "brandId": 9
+    }
+  },
+  {
+    "id": 44,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-22T00:00:00",
+    "numOfLikes": 3600,
+    "numOfWatches": 25000,
+    "brandId": 9,
+    "productId": 52,
+    "brand": {
+      "id": 9,
+      "displayName": "PureGlow",
+      "description": "PureGlow focuses on clean and ethical skincare essentials.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Twitter_bird_logo_2012.svg",
+      "verificationStatus": "Pending"
+    },
+    "product": {
+      "id": 52,
+      "name": "GlowHydra Serum",
+      "description": "Deep hydration serum enriched with hyaluronic acid.",
+      "category": "Skincare",
+      "price": 390,
+      "mediaUrl": "Products/Brand9/GlowHydra Serum.webp",
+      "discountPercentage": 40,
+      "brandId": 9
+    }
+  },
+  {
+    "id": 45,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-29T00:00:00",
+    "numOfLikes": 4900,
+    "numOfWatches": 30000,
+    "brandId": 9,
+    "productId": 53,
+    "brand": {
+      "id": 9,
+      "displayName": "PureGlow",
+      "description": "PureGlow focuses on clean and ethical skincare essentials.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Twitter_bird_logo_2012.svg",
+      "verificationStatus": "Pending"
+    },
+    "product": {
+      "id": 53,
+      "name": "VitaLush Night Cream",
+      "description": "Nourishing night cream with plant-based peptides.",
+      "category": "Skincare",
+      "price": 260,
+      "mediaUrl": "Products/Brand9/VitaLush Night Cream.webp",
+      "discountPercentage": null,
+      "brandId": 9
+    }
+  },
+  {
+    "id": 46,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-01T00:00:00",
+    "numOfLikes": 1500,
+    "numOfWatches": 7000,
+    "brandId": 10,
+    "productId": 55,
+    "brand": {
+      "id": 10,
+      "displayName": "Trendora",
+      "description": "Trendora curates unique fashion items for trendsetters worldwide.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/TikTok_logo_text.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 55,
+      "name": "VelvetEdge Dress",
+      "description": "Chic velvet dress perfect for evening occasions.",
+      "category": "Clothing",
+      "price": 780,
+      "mediaUrl": "Products/Brand10/VelvetEdge Dress.webp",
+      "discountPercentage": 10,
+      "brandId": 10
+    }
+  },
+  {
+    "id": 47,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-08T00:00:00",
+    "numOfLikes": 2200,
+    "numOfWatches": 14000,
+    "brandId": 10,
+    "productId": 56,
+    "brand": {
+      "id": 10,
+      "displayName": "Trendora",
+      "description": "Trendora curates unique fashion items for trendsetters worldwide.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/TikTok_logo_text.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 56,
+      "name": "UrbanGleam Jacket",
+      "description": "Metallic cropped jacket for a bold statement look.",
+      "category": "Outerwear",
+      "price": 650,
+      "mediaUrl": "Products/Brand10/UrbanGleam Jacket.jfif",
+      "discountPercentage": 20,
+      "brandId": 10
+    }
+  },
+  {
+    "id": 48,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-15T00:00:00",
+    "numOfLikes": 3000,
+    "numOfWatches": 20000,
+    "brandId": 10,
+    "productId": 57,
+    "brand": {
+      "id": 10,
+      "displayName": "Trendora",
+      "description": "Trendora curates unique fashion items for trendsetters worldwide.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/TikTok_logo_text.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 57,
+      "name": "ChromaSneak Shoes",
+      "description": "Color-shifting sneakers that stand out everywhere.",
+      "category": "Footwear",
+      "price": 540,
+      "mediaUrl": "Products/Brand10/ChromaSneak Shoes.webp",
+      "discountPercentage": 30,
+      "brandId": 10
+    }
+  },
+  {
+    "id": 49,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-22T00:00:00",
+    "numOfLikes": 4200,
+    "numOfWatches": 25000,
+    "brandId": 10,
+    "productId": 58,
+    "brand": {
+      "id": 10,
+      "displayName": "Trendora",
+      "description": "Trendora curates unique fashion items for trendsetters worldwide.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/TikTok_logo_text.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 58,
+      "name": "LuxeLine Handbag",
+      "description": "Elegant faux-leather handbag with gold accents.",
+      "category": "Accessories",
+      "price": 720,
+      "mediaUrl": "Products/Brand10/LuxeLine Handbag.jfif",
+      "discountPercentage": 40,
+      "brandId": 10
+    }
+  },
+  {
+    "id": 50,
+    "videoUrl": "https://drive.google.com/file/d/1LClVnDoZRd4HGWi0Lt25ks6Av3r-XHxW/view?usp=drive_link",
+    "createdAt": "2024-09-29T00:00:00",
+    "numOfLikes": 5100,
+    "numOfWatches": 32000,
+    "brandId": 10,
+    "productId": 59,
+    "brand": {
+      "id": 10,
+      "displayName": "Trendora",
+      "description": "Trendora curates unique fashion items for trendsetters worldwide.",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/TikTok_logo_text.svg",
+      "verificationStatus": "Verified"
+    },
+    "product": {
+      "id": 59,
+      "name": "PulseFit Crop Top",
+      "description": "Trendy cropped top for modern streetwear style.",
+      "category": "Clothing",
+      "price": 190,
+      "mediaUrl": "Products/Brand10/PulseFit Crop Top.webp",
+      "discountPercentage": null,
+      "brandId": 10
+    }
+  }
+]
