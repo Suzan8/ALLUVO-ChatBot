@@ -10,7 +10,6 @@ GEMINI_API_URL = os.getenv("GEMINI_API_URL", "")  # optional override
 
 
 def _default_gemini_url(model: str):
-    # ✅ الصيغة الصحيحة لاستخدام واجهة generateContent الحديثة
     return f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
 
@@ -18,47 +17,56 @@ def call_gemini(prompt: str, max_tokens: int = 512, temperature: float = 0.7):
     if not GEMINI_API_KEY:
         raise EnvironmentError("⚠️ GEMINI_API_KEY is not set. Add it to your .env file.")
 
-    # بناء رابط الطلب مع المفتاح في الـ URL
     url = GEMINI_API_URL.strip() or f"{_default_gemini_url(GEMINI_MODEL)}?key={GEMINI_API_KEY}"
 
-    headers = {
-        "Content-Type": "application/json"
-    }
+    headers = {"Content-Type": "application/json"}
 
-    # ✅ الصيغة الصحيحة لـ Gemini 2.5 REST API
     payload = {
         "contents": [
             {
                 "parts": [
-                    {"text": f"You are an assistant for ALLUVO ecommerce site. Answer concisely in Arabic.\n\n{prompt}"}
+                    {"text": f"أنت مساعد ذكي لمتجر ALLUVO الإلكتروني. أجب فقط باللغة العربية بدقة واختصار.\n\n{prompt}"}
                 ]
             }
         ],
         "generationConfig": {
             "maxOutputTokens": max_tokens,
             "temperature": temperature,
-        }
+        },
     }
 
-    # إرسال الطلب
     resp = requests.post(url, headers=headers, json=payload, timeout=30)
     resp.raise_for_status()
 
     data = resp.json()
 
-    # ✅ تحليل استجابة Gemini الحديثة
+    # ✅ محاولة استخلاص النص من أكثر من مسار محتمل
     try:
-        return data["candidates"][0]["content"]["parts"][0]["text"]
+        text = data["candidates"][0]["content"]["parts"][0].get("text", "").strip()
+        if text:
+            return text
     except Exception:
-        return str(data)
+        pass
+
+    # بعض نسخ Gemini تُرجع النص داخل fields مختلفة
+    try:
+        alt = data.get("candidates", [{}])[0].get("output", "")
+        if alt:
+            return alt.strip()
+    except Exception:
+        pass
+
+    # 🔍 لو لم نجد نص واضح، نُعيد الرد الخام للمراجعة (اختياري)
+    return "⚠️ لم أستطع تحليل الرد من Gemini.\n" + str(data)
 
 
 def generate_answer(context: str, user_query: str) -> str:
     prompt = (
         f"المعلومات التالية تم استرجاعها من قاعدة بيانات ALLUVO:\n\n{context}\n\n"
-        f"بناءً على المعلومات أعلاه، أجب على السؤال التالي بدقة وباللغة العربية: {user_query}\n"
-        "- ابدأ برد قصير (1-3 جمل).\n"
-        "- إن وُجد أكثر من منتج أعطِ جدول نصي: اسم | براند | سعر | رابط الصورة إن وُجد.\n"
-        "- إن لم تكن المعلومات كافية اعترف واطلب توضيحًا."
+        f"بناءً على المعلومات أعلاه، أجب على السؤال التالي بدقة وباللغة العربية فقط: {user_query}\n"
+        "- استخدم ردًا مختصرًا وواضحًا.\n"
+        "- لا تشرح خطواتك.\n"
+        "- إذا كان هناك أكثر من منتج، اذكر اسم البراند المشترك.\n"
+        "- إذا لم تكن المعلومة موجودة، قل 'لا توجد معلومات في قاعدة البيانات'."
     )
     return call_gemini(prompt)

@@ -1,10 +1,10 @@
-
 import os
 import json
+import re
 import faiss
 import numpy as np
 from typing import List
-from app.embedder import embed_texts
+from app.embedder import embed_texts  # ✅ الدالة الصحيحة من embedder.py
 
 # المسارات الأساسية
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -13,10 +13,9 @@ INDEXES_DIR = os.path.join(BASE_DIR, "Indexes")
 
 
 # --------------------------------------------
-# 🧩 دالة استخراج القيم المتداخلة (Nested Keys)
+# 🧩 دالة استخراج القيم المتداخلة
 # --------------------------------------------
 def get_nested_value(data: dict, key_path: str):
-    """يدعم الوصول إلى الحقول المتداخلة مثل brand.displayName أو reels.videoUrl"""
     keys = key_path.split(".")
     for key in keys:
         if isinstance(data, dict):
@@ -32,12 +31,9 @@ def get_nested_value(data: dict, key_path: str):
 
 
 # --------------------------------------------
-# ✂️ دالة تقسيم النصوص إلى أجزاء (Chunks)
+# ✂️ دالة تقسيم النصوص
 # --------------------------------------------
 def chunk_text(text: str, size: int = 300, overlap: int = 50) -> List[str]:
-    """
-    تقسيم النص إلى مقاطع صغيرة لتقليل فقدان المعنى أثناء توليد الـ embeddings
-    """
     if not text:
         return []
     words = text.split()
@@ -52,56 +48,161 @@ def chunk_text(text: str, size: int = 300, overlap: int = 50) -> List[str]:
 
 
 # --------------------------------------------
-# 🏗️ بناء فهرس FAISS لملف JSON محدد
+# 🏗️ دالة بناء فهرس عام لأي نوع بيانات
 # --------------------------------------------
-def build_faiss_index_for_json(json_filename: str, index_name: str, text_fields=None):
+def build_faiss_index_for_json(data_list, index_name, text_function):
     """
-    يبني فهرس متجهي باستخدام FAISS من بيانات JSON.
-    text_fields: قائمة الحقول التي سيتم تحويلها إلى نصوص (تدعم المفاتيح المتداخلة)
+    data_list: قائمة البيانات (list of dicts)
+    index_name: اسم الفهرس الناتج (مثل products_index)
+    text_function: دالة لتحويل كل عنصر إلى نص
     """
-    path = os.path.join(DATA_DIR, json_filename)
-    if not os.path.exists(path):
-        raise FileNotFoundError(f"❌ الملف غير موجود: {path}")
-
-    with open(path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
     docs, metas = [], []
 
-    for item in data:
-        # دمج الحقول المطلوبة
-        if text_fields:
-            combined_text = " \n ".join([get_nested_value(item, f) for f in text_fields])
-        else:
-            combined_text = " \n ".join([
-                str(item.get(k, "")) for k in ["name", "description", "caption", "brand_name"] if item.get(k)
-            ])
-
-        # تقطيع النصوص الطويلة
-        for i, chunk in enumerate(chunk_text(combined_text)):
+    for i, item in enumerate(data_list):
+        combined_text = text_function(item)
+        for j, chunk in enumerate(chunk_text(combined_text)):
             if chunk.strip():
                 docs.append(chunk)
                 metas.append({
-                    "source_id": item.get("id"),
-                    "chunk_index": i,
+                    "source_id": item.get("id", i),
+                    "chunk_index": j,
                     "original": item
                 })
 
     if not docs:
-        raise ValueError(f"⚠️ لم يتم العثور على نصوص يمكن فهرستها في {json_filename}")
+        raise ValueError(f"⚠️ لم يتم العثور على نصوص يمكن فهرستها في {index_name}")
 
-    # 🧠 إنشاء المتجهات باستخدام embedder
     embeddings = embed_texts(docs)
     dim = embeddings.shape[1]
     index = faiss.IndexFlatL2(dim)
     index.add(embeddings)
 
-    # حفظ الفهرس والبيانات
+    # إنشاء مجلد الفهرس
     index_dir = os.path.join(INDEXES_DIR, index_name)
     os.makedirs(index_dir, exist_ok=True)
+
     faiss.write_index(index, os.path.join(index_dir, "index.faiss"))
     with open(os.path.join(index_dir, "meta.json"), "w", encoding="utf-8") as f:
         json.dump({"docs": docs, "metas": metas}, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ تم بناء الفهرس: {json_filename} -> {index_dir} (عدد المتجهات={len(docs)}, الأبعاد={dim})")
+    print(f"✅ تم بناء الفهرس: {index_name} (عدد المقاطع={len(docs)}, أبعاد={dim})")
 
+
+# --------------------------------------------
+# 🧱 1. فهرس المنتجات Products
+# --------------------------------------------
+def make_product_text(item):
+    text = f"""
+    اسم المنتج: {item.get('name', '')}.
+    الوصف: {item.get('description', '')}.
+    الفئة: {item.get('category', '')}.
+    السعر: {item.get('price', '')}.
+    نسبة الخصم: {item.get('discountPercentage', '')}%.
+    إمكانية التخصيص: {'نعم' if item.get('isCustomizable', False) else 'لا'}.
+    """
+
+    brand = item.get("brand", {})
+    if brand:
+        text += f"""
+        البراند: {brand.get('displayName', '')}.
+        وصف البراند: {brand.get('description', '')}.
+        حالة التوثيق: {brand.get('verificationStatus', '')}.
+        """
+
+    reels = item.get("reels", [])
+    for reel in reels:
+        text += f"""
+        فيديو ترويجي بعدد لايكات {reel.get('numOfLikes', 0)} 
+        ومشاهدات {reel.get('numOfWatches', 0)}.
+        رابط الفيديو: {reel.get('videoUrl', '')}.
+        """
+
+    return text
+
+
+# --------------------------------------------
+# 🧱 2. فهرس البراندات Brands
+# --------------------------------------------
+def make_brand_text(item):
+    html_text = item.get("returnPolicyAsHtml", "")
+    clean_policy = re.sub(r"<[^>]+>", " ", html_text)
+    clean_policy = re.sub(r"\s+", " ", clean_policy).strip()
+
+    text = f"""
+    اسم البراند: {item.get('displayName', '')}.
+    الوصف: {item.get('description', '')}.
+    حالة التوثيق: {item.get('verificationStatus', '')}.
+    شعار البراند: {item.get('logoUrl', '')}.
+    سياسة الاسترجاع: {clean_policy}.
+    """
+
+    products = item.get("products", [])
+    if products:
+        text += f"\nيحتوي البراند على {len(products)} منتجًا:\n"
+        for product in products:
+            text += f"""
+            🔸 المنتج: {product.get('name', '')}
+            الوصف: {product.get('description', '')}
+            الفئة: {product.get('category', '')}
+            السعر: {product.get('price', '')}
+            نسبة الخصم: {product.get('discountPercentage', 0)}%
+            إمكانية التخصيص: {'نعم' if product.get('isCustomizable', False) else 'لا'}.
+            """
+
+            reels = product.get("reels", [])
+            if reels:
+                text += f"\n📹 عدد الريلز: {len(reels)}\n"
+                for reel in reels:
+                    text += f"""
+                    عدد الإعجابات: {reel.get('numOfLikes', 0)}
+                    عدد المشاهدات: {reel.get('numOfWatches', 0)}
+                    رابط الفيديو: {reel.get('videoUrl', '')}
+                    """
+
+    return text
+
+
+# --------------------------------------------
+# 🧱 3. فهرس الريلز Reels
+# --------------------------------------------
+def make_reel_text(item):
+    brand = item.get("brand", {})
+    product = item.get("product", {})
+
+    text = f"""
+    🎥 فيديو ترويجي
+    عدد الإعجابات: {item.get('numOfLikes', 0)}.
+    عدد المشاهدات: {item.get('numOfWatches', 0)}.
+    رابط الفيديو: {item.get('videoUrl', '')}.
+    المنتج: {product.get('name', '')}.
+    البراند: {brand.get('displayName', '')}.
+    """
+    return text
+
+
+# --------------------------------------------
+# 🚀 التنفيذ الرئيسي
+# --------------------------------------------
+if __name__ == "__main__":
+    # 🛍️ المنتجات
+    products_path = os.path.join(DATA_DIR, "products.json")
+    if os.path.exists(products_path):
+        with open(products_path, "r", encoding="utf-8") as f:
+            products_data = json.load(f)
+        build_faiss_index_for_json(products_data, "products_index", make_product_text)
+
+    # 🏷️ البراندات
+    brands_path = os.path.join(DATA_DIR, "brands.json")
+    if os.path.exists(brands_path):
+        with open(brands_path, "r", encoding="utf-8") as f:
+            brands_data = json.load(f)
+        build_faiss_index_for_json(brands_data, "brands_index", make_brand_text)
+
+    # 🎥 الريلز
+    reels_path = os.path.join(DATA_DIR, "reels.json")
+    if os.path.exists(reels_path):
+        with open(reels_path, "r", encoding="utf-8") as f:
+            reels_data = json.load(f)
+        build_faiss_index_for_json(reels_data, "reels_index", make_reel_text)
+
+    print("\n🎯 تم بناء جميع الفهارس بنجاح!")

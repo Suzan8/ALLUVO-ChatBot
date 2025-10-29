@@ -1,53 +1,21 @@
-from app.index_builder import build_faiss_index_for_json
+import os
+import json
+from app.index_builder import build_faiss_index_for_json, make_product_text, make_brand_text, make_reel_text
 
-build_faiss_index_for_json(
-    "products.json",
-    "products_index",
-    [
-        "name",                  # اسم المنتج
-        "description",           # وصف المنتج
-        "category",              # الفئة (ملابس، أحذية..)
-        "brand.displayName",     # اسم البراند
-        "brand.description",     # وصف البراند
-        "brand.verificationStatus", # حالة توثيق البراند
-        "price",                 # السعر
-        "discountPercentage",    # نسبة الخصم
-        "isCustomizable",        # إمكانية التخصيص
-        "reels.videoUrl"         # ربط الريلز (قد تحتوي كلمات مفتاحية)
-    ]
-)
-build_faiss_index_for_json(
-    "brands.json",
-    "brands_index",
-    [
-        "displayName",                # اسم العلامة التجارية
-        "description",                # وصف العلامة التجارية
-        "verificationStatus",         # حالة التوثيق (Verified / Unverified)
-        "returnPolicyAsHtml",         # سياسة الاسترجاع مكتوبة داخل HTML
-        "products.name",              # أسماء المنتجات التابعة للعلامة
-        "products.description",       # وصف المنتجات
-        "products.category",          # تصنيف المنتجات (ملابس، أحذية، ... إلخ)
-        "products.price",             # السعر (يساعد البحث العددي والنصي)
-        "products.discountPercentage",# نسبة الخصم
-        "products.isCustomizable",    # هل المنتج قابل للتخصيص
-        "products.reels.videoUrl"     # فيديوهات المنتجات (Reels)
-    ]
-)
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "Data")
 
-build_faiss_index_for_json(
-    "reels.json",
-    "reels_index",
-    [
-        "videoUrl",             # رابط الفيديو الأساسي
-        "numOfLikes",           # عدد الإعجابات
-        "numOfWatches",         # عدد المشاهدات
-        "brand.displayName",    # اسم العلامة التجارية المرتبطة
-        "brand.description",    # وصف العلامة التجارية
-        "brand.verificationStatus", # حالة التوثيق للعلامة
-        "product.name",         # اسم المنتج المرتبط بالفيديو
-        "product.description",  # وصف المنتج
-        "product.category",     # تصنيف المنتج
-        "product.price",        # سعر المنتج
-        "product.discountPercentage" # نسبة الخصم على المنتج
-    ]
-)
+# 🛍️ المنتجات
+with open(os.path.join(DATA_DIR, "products.json"), "r", encoding="utf-8") as f:
+    products_data = json.load(f)
+build_faiss_index_for_json(products_data, "products_index", make_product_text)
+
+# 🏷️ البراندات
+with open(os.path.join(DATA_DIR, "brands.json"), "r", encoding="utf-8") as f:
+    brands_data = json.load(f)
+build_faiss_index_for_json(brands_data, "brands_index", make_brand_text)
+
+# 🎥 الريلز
+with open(os.path.join(DATA_DIR, "reels.json"), "r", encoding="utf-8") as f:
+    reels_data = json.load(f)
+build_faiss_index_for_json(reels_data, "reels_index", make_reel_text)
