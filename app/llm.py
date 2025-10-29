@@ -40,7 +40,7 @@ def call_gemini(prompt: str, max_tokens: int = 512, temperature: float = 0.7):
 
     data = resp.json()
 
-    # ✅ محاولة استخلاص النص من أكثر من مسار محتمل
+   
     try:
         text = data["candidates"][0]["content"]["parts"][0].get("text", "").strip()
         if text:
@@ -48,7 +48,6 @@ def call_gemini(prompt: str, max_tokens: int = 512, temperature: float = 0.7):
     except Exception:
         pass
 
-    # بعض نسخ Gemini تُرجع النص داخل fields مختلفة
     try:
         alt = data.get("candidates", [{}])[0].get("output", "")
         if alt:
@@ -56,7 +55,6 @@ def call_gemini(prompt: str, max_tokens: int = 512, temperature: float = 0.7):
     except Exception:
         pass
 
-    # 🔍 لو لم نجد نص واضح، نُعيد الرد الخام للمراجعة (اختياري)
     return "⚠️ لم أستطع تحليل الرد من Gemini.\n" + str(data)
 
 

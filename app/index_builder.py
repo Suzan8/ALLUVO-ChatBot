@@ -4,17 +4,13 @@ import re
 import faiss
 import numpy as np
 from typing import List
-from app.embedder import embed_texts  # ✅ الدالة الصحيحة من embedder.py
+from app.embedder import embed_texts  
 
-# المسارات الأساسية
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "Data")
 INDEXES_DIR = os.path.join(BASE_DIR, "Indexes")
 
-
-# --------------------------------------------
-# 🧩 دالة استخراج القيم المتداخلة
-# --------------------------------------------
+#nested value extraction
 def get_nested_value(data: dict, key_path: str):
     keys = key_path.split(".")
     for key in keys:
@@ -29,10 +25,7 @@ def get_nested_value(data: dict, key_path: str):
             return ""
     return str(data) if data else ""
 
-
-# --------------------------------------------
-# ✂️ دالة تقسيم النصوص
-# --------------------------------------------
+#chunking text
 def chunk_text(text: str, size: int = 300, overlap: int = 50) -> List[str]:
     if not text:
         return []
@@ -47,9 +40,7 @@ def chunk_text(text: str, size: int = 300, overlap: int = 50) -> List[str]:
     return chunks
 
 
-# --------------------------------------------
-# 🏗️ دالة بناء فهرس عام لأي نوع بيانات
-# --------------------------------------------
+#build indexes
 def build_faiss_index_for_json(data_list, index_name, text_function):
     """
     data_list: قائمة البيانات (list of dicts)
@@ -77,7 +68,6 @@ def build_faiss_index_for_json(data_list, index_name, text_function):
     index = faiss.IndexFlatL2(dim)
     index.add(embeddings)
 
-    # إنشاء مجلد الفهرس
     index_dir = os.path.join(INDEXES_DIR, index_name)
     os.makedirs(index_dir, exist_ok=True)
 
@@ -88,9 +78,7 @@ def build_faiss_index_for_json(data_list, index_name, text_function):
     print(f"✅ تم بناء الفهرس: {index_name} (عدد المقاطع={len(docs)}, أبعاد={dim})")
 
 
-# --------------------------------------------
-# 🧱 1. فهرس المنتجات Products
-# --------------------------------------------
+#products
 def make_product_text(item):
     text = f"""
     اسم المنتج: {item.get('name', '')}.
@@ -120,9 +108,7 @@ def make_product_text(item):
     return text
 
 
-# --------------------------------------------
-# 🧱 2. فهرس البراندات Brands
-# --------------------------------------------
+#brands
 def make_brand_text(item):
     html_text = item.get("returnPolicyAsHtml", "")
     clean_policy = re.sub(r"<[^>]+>", " ", html_text)
@@ -161,10 +147,7 @@ def make_brand_text(item):
 
     return text
 
-
-# --------------------------------------------
-# 🧱 3. فهرس الريلز Reels
-# --------------------------------------------
+#reels
 def make_reel_text(item):
     brand = item.get("brand", {})
     product = item.get("product", {})
@@ -180,25 +163,22 @@ def make_reel_text(item):
     return text
 
 
-# --------------------------------------------
-# 🚀 التنفيذ الرئيسي
-# --------------------------------------------
 if __name__ == "__main__":
-    # 🛍️ المنتجات
+    
     products_path = os.path.join(DATA_DIR, "products.json")
     if os.path.exists(products_path):
         with open(products_path, "r", encoding="utf-8") as f:
             products_data = json.load(f)
         build_faiss_index_for_json(products_data, "products_index", make_product_text)
 
-    # 🏷️ البراندات
+
     brands_path = os.path.join(DATA_DIR, "brands.json")
     if os.path.exists(brands_path):
         with open(brands_path, "r", encoding="utf-8") as f:
             brands_data = json.load(f)
         build_faiss_index_for_json(brands_data, "brands_index", make_brand_text)
 
-    # 🎥 الريلز
+   
     reels_path = os.path.join(DATA_DIR, "reels.json")
     if os.path.exists(reels_path):
         with open(reels_path, "r", encoding="utf-8") as f:
